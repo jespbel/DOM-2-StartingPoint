@@ -35,7 +35,7 @@ addButton.addEventListener("click", () => {
   const inputValue = input.value;
   if (inputValue) {
     catNames.push(inputValue);
-    renderCatBadge(inputValue);
+    renderAllCats(catNames);
     input.value = "";
   }
 });
@@ -67,9 +67,26 @@ const renderCatBadge = (catName) => {
   catImage.alt = "cat";
   catImage.classList.add("cat-image");
   circle.appendChild(catImage);
+
+  // Allow the user to delete the badge
+  circle.addEventListener("click", (event) => {
+    if (event.target.classList.contains("cat-image")) {
+      catNames = catNames.filter((name) => name !== catName);
+      renderAllCats(catNames);
+    }
+  });
 };
 
 // render all the cat badges
-catNames.forEach((catName) => {
-  renderCatBadge(catName);
-});
+const renderAllCats = (cats) => {
+  // clear the container
+  container.innerHTML = "";
+
+  // render all the cat badges
+  cats.forEach((cat) => {
+    renderCatBadge(cat);
+  });
+};
+
+// render all the cats initially
+renderAllCats(catNames);
