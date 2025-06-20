@@ -1,3 +1,4 @@
+// Initialize the cat names
 const catNames = [
   "finn",
   "shahid",
@@ -12,25 +13,30 @@ const catNames = [
 
 const root = document.getElementById("root");
 
+// Make the header
 const header = document.createElement("h1");
 header.classList.add("header");
 header.textContent = "Cat Badge Generator";
 root.appendChild(header);
 
+// Make the input container
 const inputContainer = document.createElement("div");
 inputContainer.classList.add("input-container");
 root.appendChild(inputContainer);
 
+// Make the input
 const input = document.createElement("input");
 input.classList.add("input");
 input.placeholder = "Enter a cat name";
 inputContainer.appendChild(input);
 
+// Make the add button
 const addButton = document.createElement("button");
 addButton.classList.add("add-button");
 addButton.textContent = "Add";
 inputContainer.appendChild(addButton);
 
+// Add event listener to the add button
 addButton.addEventListener("click", () => {
   const inputValue = input.value;
   if (inputValue) {
@@ -40,10 +46,12 @@ addButton.addEventListener("click", () => {
   }
 });
 
+// Make the container for the cat badges
 const container = document.createElement("div");
 container.classList.add("container");
 root.appendChild(container);
 
+// Render a cat badge
 const renderCatBadge = (catName) => {
   // Make the badge container
   const badgeContainer = document.createElement("div");
@@ -77,16 +85,16 @@ const renderCatBadge = (catName) => {
   });
 };
 
-// render all the cat badges
+// Render all the cat badges
 const renderAllCats = (cats) => {
-  // clear the container
+  // Clear the container
   container.innerHTML = "";
 
-  // render all the cat badges
+  // Render all the cat badges
   cats.forEach((cat) => {
     renderCatBadge(cat);
   });
 };
 
-// render all the cats initially
+// Render all the cats initially
 renderAllCats(catNames);
