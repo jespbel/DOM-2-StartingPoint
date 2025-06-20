@@ -1,6 +1,6 @@
 # DOM II Assignment
 
-This is the starting point for the DOM I assignment. On your team, pick one person to be the owner of the repo.
+This is the starting point for the DOM II assignment. On your team, pick one person to be the owner of the repo.
 
 That person will "fork" this repository. Then, they will add the other members of the group as collaborators.
 
