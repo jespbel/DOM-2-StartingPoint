@@ -1,10 +1,44 @@
-const catNames = ["finn", "jake", "lumpy", "princess", "bubblegum", "flapjack"];
+const catNames = [
+  "finn",
+  "shahid",
+  "aj",
+  "huda",
+  "frank",
+  "miranda",
+  "jessica",
+  "nevin",
+  "youn",
+];
 
 const root = document.getElementById("root");
 
 const header = document.createElement("h1");
+header.classList.add("header");
 header.textContent = "Cat Badge Generator";
 root.appendChild(header);
+
+const inputContainer = document.createElement("div");
+inputContainer.classList.add("input-container");
+root.appendChild(inputContainer);
+
+const input = document.createElement("input");
+input.classList.add("input");
+input.placeholder = "Enter a cat name";
+inputContainer.appendChild(input);
+
+const addButton = document.createElement("button");
+addButton.classList.add("add-button");
+addButton.textContent = "Add";
+inputContainer.appendChild(addButton);
+
+addButton.addEventListener("click", () => {
+  const inputValue = input.value;
+  if (inputValue) {
+    catNames.push(inputValue);
+    renderCatBadge(inputValue);
+    input.value = "";
+  }
+});
 
 const container = document.createElement("div");
 container.classList.add("container");
@@ -35,6 +69,7 @@ const renderCatBadge = (catName) => {
   circle.appendChild(catImage);
 };
 
+// render all the cat badges
 catNames.forEach((catName) => {
   renderCatBadge(catName);
 });
