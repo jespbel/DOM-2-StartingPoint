@@ -3,25 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Grid Maker</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="main.js"></script>
   </head>
   <body>
+    <!-- Please feel free to change the HTML as you see fit! This is just a starting point. -->
     <div id="root">
+      <h1>Grid Maker</h1>
       <table>
         <tbody>
           <tr>
-            <td>Name</td>
-            <td>
-              <input type="text" id="name" placeholder="Name" />
-            </td>
-            <td>
-              <button id="add-name">Add</button>
-            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
+      <div>
+        <button id="add-row">Add Row</button>
+        <button id="add-column">Add Column</button>
+        <select id="color-select">
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+        </select>
+        <button id="fill-grid">Fill Grid</button>
+        <button id="clear-grid">Clear Grid</button>
+      </div>
     </div>
   </body>
 </html>

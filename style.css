@@ -1,0 +1,26 @@
+/* Please feel free to change the CSS as you see fit! This is just a starting point. */
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #add8e6;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+td {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+}
