@@ -1,9 +1,22 @@
 // Please feel free to change the JS as you see fit! This is just a starting point.
+
+const colorNames = [
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "blue",
+  "purple"
+]
+
+
 let numberRows = 3; 
 
 let columnLength = 3;
 
-let currentColor = "red"
+let optionSelection = document.getElementById("color-select")
+
+let currentColor = colorNames[optionSelection.selectedIndex]
 
 const root = document.getElementById("root");
 root.addEventListener("click", (event) => {
